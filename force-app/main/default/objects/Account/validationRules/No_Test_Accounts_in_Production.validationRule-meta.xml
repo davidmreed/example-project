@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Test_Accounts_in_Production</fullName>
+    <active>true</active>
+    <errorConditionFormula>CONTAINS(Name, "Dummy") || Contains(Name, "Test")</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Please do not create test accounts in Production.</errorMessage>
+</ValidationRule>
