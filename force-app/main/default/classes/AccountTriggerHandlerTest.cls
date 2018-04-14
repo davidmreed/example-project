@@ -17,5 +17,7 @@ public class AccountTriggerHandlerTest {
         for (Account a : testAccounts) { 
             System.assert(a.Name.startsWith(u.Name + ': Dummy Account'));
         }
+
+        System.assertEquals(20, testAccounts.size());
     }
 }
