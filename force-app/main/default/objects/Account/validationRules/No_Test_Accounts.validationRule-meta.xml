@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>No_Test_Accounts</fullName>
-    <active>true</active>
-    <description>User cannot create accounts whose names contain "Dummy"</description>
-    <errorConditionFormula>CONTAINS(Name, "Dummy")</errorConditionFormula>
-    <errorDisplayField>Name</errorDisplayField>
-    <errorMessage>You may not insert dummy accounts.</errorMessage>
-</ValidationRule>
