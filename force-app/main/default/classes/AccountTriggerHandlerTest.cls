@@ -8,7 +8,7 @@ public class AccountTriggerHandlerTest {
             testAccounts.add(new Account(Name = 'Dummy Account ' + String.valueOf(i), OwnerId = UserInfo.getUserId()));
         }
 
-        AccountTriggerHandler.beforeInsert(testAccounts);
+        AccountTriggerHandler.beforeInsert(testAccounts); 
 
         User u = [SELECT Name FROM User WHERE Id = :UserInfo.getUserId() LIMIT 1];
 
