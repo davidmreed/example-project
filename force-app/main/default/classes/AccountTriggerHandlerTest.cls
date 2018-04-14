@@ -12,8 +12,10 @@ public class AccountTriggerHandlerTest {
 
         User u = [SELECT Name FROM User WHERE Id = :UserInfo.getUserId() LIMIT 1];
 
-        for (Integer i = 0; i < 20; i++) { 
-            System.assertEquals(u.Name + ': Dummy Account ' + String.valueOf(i), testAccounts[i].Name);
+        testAccounts = [SELECT Name FROM Account ORDER BY Name];
+
+        for (Account a : testAccounts) { 
+            System.assert(a.Name.startsWith(u.Name + ': Dummy Account '));
         }
     }
 }
