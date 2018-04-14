@@ -14,6 +14,6 @@ public class AccountTriggerHandlerTest {
 
         for (Integer i = 0; i < 20; i++) {
             System.assertEquals(u.Name + ': Dummy Account ' + String.valueOf(i), testAccounts[i].Name);
-        }
+        } 
     }
 }
