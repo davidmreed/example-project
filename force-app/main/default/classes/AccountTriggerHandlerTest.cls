@@ -5,7 +5,7 @@ public class AccountTriggerHandlerTest {
         List<Account> testAccounts = new List<Account>();
 
         for (Integer i = 0; i < 20; i++) {
-            testAccounts.add(new Account(Name = 'Dummy Account ' + String.valueOf(i), OwnerId = UserInfo.getUserId()));
+            testAccounts.add(new Account(Name = 'Pretend Account ' + String.valueOf(i), OwnerId = UserInfo.getUserId()));
         }
 
         insert testAccounts;
@@ -15,7 +15,7 @@ public class AccountTriggerHandlerTest {
         testAccounts = [SELECT Name FROM Account ORDER BY Name];
 
         for (Account a : testAccounts) { 
-            System.assert(a.Name.startsWith(u.Name + ': Dummy Account '));
+            System.assert(a.Name.startsWith(u.Name + ': Pretend Account '));
         }
     }
 }
